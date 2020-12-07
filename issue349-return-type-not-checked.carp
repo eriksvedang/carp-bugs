@@ -1,0 +1,9 @@
+(defn recurse [a]
+  (if (= a 0)
+    ;; We return an Int
+    0
+    ;; But treat the return value of the recursive call as &Int
+    @(recurse (dec a))))
+
+(defn main []
+  (println* (recurse 1)))

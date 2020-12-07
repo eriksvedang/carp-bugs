@@ -1,0 +1,6 @@
+;; Second example:
+(defn main []
+  (let-do [x ""]
+    (let [a [@"hi"]]
+      (set! x (Array.unsafe-nth &a 0)))
+    (println* x))) ; a was already dropped!

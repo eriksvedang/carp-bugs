@@ -1,0 +1,9 @@
+(def lines
+  (the (Array String) (Array.allocate 0)))
+
+(def numbers
+  (Array.copy-map &(fn [x] (Maybe.unsafe-from (Int.from-string x)))
+                  &lines))
+
+(Array.copy-map &(fn [x] (Pair.init x x ))
+                &numbers)

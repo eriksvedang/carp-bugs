@@ -1,0 +1,10 @@
+(defmodule Sub
+ (defmodule Mod
+  (defmodule Ule
+    (sig a-func (Fn [String] String))
+    (defn a-func [a] a)
+
+    (defn hey [a] (String.append a &(a-func @a))))))
+
+(defn main []
+  (println* (Sub.Mod.Ule.hey "Wow")))

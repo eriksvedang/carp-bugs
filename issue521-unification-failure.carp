@@ -1,0 +1,7 @@
+(deftype (HitRecord a) [ t a ])
+(deftype (CurrentHit a) [ hr (Maybe (HitRecord a)) ])
+(defn hit [elts]
+  (let [
+        starting (CurrentHit.init (Maybe.Just (HitRecord.init 0.0)))
+        ]
+    @(CurrentHit.hr &starting)))

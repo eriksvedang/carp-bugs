@@ -1,0 +1,10 @@
+(defmodule Modone
+ (defmodule Modtwo
+  (hidden funone)
+  (defn funone [] @"Hello")
+  (defn funtwo [] (funone))))
+
+(use Modone.Modtwo)
+
+(defn main []
+  (println* (the String (funtwo))))

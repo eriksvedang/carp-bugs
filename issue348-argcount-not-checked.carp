@@ -1,0 +1,7 @@
+(defn recurse [a b]
+  (let [c (+ b 1)
+        out (recurse c)]
+    (+ out 1)))
+
+(defn main []
+  (println* (recurse 1 2)))

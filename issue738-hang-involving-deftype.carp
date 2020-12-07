@@ -1,0 +1,12 @@
+(deftype MyType [v Int])
+
+(defmodule MyType
+  (sig delete (Fn [MyType] ()))
+  (defn delete [o]
+    (do
+      (IO.println "in delete")
+      ())))
+
+(defn main []
+  (let [v (MyType.init 0)]
+    (IO.println "in let")))

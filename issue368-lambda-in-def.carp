@@ -1,0 +1,7 @@
+(defn duplicate-arg [f]
+  (fn [x] (f x x)))
+
+(def double (duplicate-arg +))
+
+(defn main []
+  (println* (double 3)))
